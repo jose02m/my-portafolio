@@ -4,6 +4,7 @@ import ProjectCard from "./components/ProjectCard.jsx";
 import SkillPill from "./components/SkillPill.jsx";
 import ContactCard from "./components/ContactCard.jsx";
 import ConstellationBG from "./components/ConstellationBG.jsx";
+import TypewriterRotator from "./components/TypewriterRotator.jsx";
 
 import { motion } from "framer-motion";
 
@@ -78,7 +79,21 @@ export default function App() {
         <Section
           id="home"
           title="Hola, soy Jose Carlos Martínez 👋"
-          subtitle="Ingeniero de Sistemas enfocado en automatización con IA, desarrollo web y analítica de datos."
+          subtitle={
+            <TypewriterRotator
+              phrases={[
+                "Ingeniero de Sistemas",
+                "Docente de programación",
+                "Desarrollador web",
+                "Analista y visualizador de datos",
+                "Automatizador de flujos n8n + GPTs",
+              ]}
+              typingSpeed={42}
+              deletingSpeed={24}
+              pauseTime={1100}
+              className="text-muted"
+            />
+          }
         >
           <div className="grid md:grid-cols-5 gap-4">
             <motion.div
